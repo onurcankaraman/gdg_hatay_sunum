@@ -290,13 +290,22 @@ print(response.json())
 
 ## 👥 Katkıda Bulunanlar
 
-**GDG Hatay** için geliştirilmiştir.
+Bu proje **Google Developer Groups Hatay DevFest 2025** etkinliği için geliştirilmiştir.
+
+---
+
+## ⚠️ Önemli Notlar
+
+- **Veri Seti**: Bu projede kullanılan veri seti **anonimleştirilmiş** bir veri setidir.
+- **Firma İsimleri**: "Digitheta CNC Testere" ve diğer firma/ürün isimleri **eğitim amaçlı** oluşturulmuş örnek isimlerdir.
+- **Amaç**: Bu proje **eğitim ve öğretim** amaçlı hazırlanmış bir demo çalışmasıdır.
+- **Gerçek Veri**: Veriler gerçek bir endüstriyel uygulamayı simüle etmek için tasarlanmıştır ancak herhangi bir gerçek firmaya ait değildir.
 
 ---
 
 ## 📄 Lisans
 
-Bu proje eğitim amaçlı geliştirilmiştir.
+Bu proje eğitim amaçlı geliştirilmiştir ve **GDG Hatay DevFest 2025** için hazırlanmıştır.
 
 ---
 
