@@ -56,6 +56,19 @@ Langflow agent'inin etkili kullanımı için gerekli dokümantasyonlar:
 
 → **Ne zaman kullan**: Analiz sonuçları hakkında bilgi istediğinizde, model performansını anlamak istediğinizde
 
+## 🗄️ Qdrant Entegrasyonu (RAG)
+
+- **Bağlantı**: `Host=localhost`, `Port=6333`, `HTTPS=False` (veya Docker network içinden `Host=qdrant`, `Port=6333`).
+- **Embedded Dashboard**: Ek imaj gerekmeden Qdrant arayüzü için `http://localhost:6333/dashboard` adresini kullanabilirsiniz.
+- **Health & Collections**: `http://localhost:6333/health` ve `http://localhost:6333/collections` ile hızlı kontrol.
+- **Collection Oluşturma (REST)**:
+  ```bash
+  curl -X PUT "http://localhost:6333/collections/documents" \
+    -H "Content-Type: application/json" \
+    -d '{"vectors": {"size": 384, "distance": "Cosine"}}'
+  ```
+- **Langflow Qdrant Component**: Sadece Host/Port alanlarını doldurun, URL/Path/Location boş bırakın, HTTPS kutusu işaretli olmasın.
+
 ## 🚀 Kurulum ve Kullanım
 
 ### 1. Langflow Kurulumu
