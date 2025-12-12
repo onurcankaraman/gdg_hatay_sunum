@@ -14,6 +14,48 @@ Bu Langflow projesi, CNC aşınma tahmini API'sini kullanabilen, dosya okuyabile
 - **🤖 AI Agent**: Google Generative AI ile doğal dil anlama
 - **💬 Chat Interface**: Kullanıcı dostu sohbet arayüzü
 
+## 📚 RAG Dokümantasyonu
+
+Langflow agent'inin etkili kullanımı için gerekli dokümantasyonlar:
+
+### 1. 📖 **project_context.md** - Proje Bağlamı
+- Proje genel özeti
+- Sistem mimarisi
+- Veri seti bilgileri
+- API endpoints özeti
+- Teknoloji stack
+- Başarı metrikleri
+
+→ **Ne zaman kullan**: Agent'e proje hakkında genel bilgi sorduğunuzda
+
+### 2. 📚 **data_dictionary.md** - Veri Sözlüğü
+- Tüm özellik tanımları (Kesme Gücü, İlerleme Hızı, RPM)
+- Hedef değişken (AşınmaOranı) detayları
+- Değer aralıkları ve istatistikler
+- Değişkenler arası ilişkiler
+- Veri kalitesi bilgisi
+
+→ **Ne zaman kullan**: Veri hakkında sorular sorduğunuzda, özellik anlamını öğrenmek istediğinizde
+
+### 3. 🔌 **api_reference.md** - API Referansı
+- Tüm API endpoints açıklaması
+- İstek/yanıt örnekleri
+- Error handling
+- Code samples (Python, cURL, JavaScript)
+- Performance metrikleri
+- Best practices
+
+→ **Ne zaman kullan**: API çağrısı yapmak, tahmin almak, API hatasını anlamak istediğinizde
+
+### 4. 📈 **analysis_results.md** - Analiz Sonuçları
+- Korelasyon analizi bulguları
+- İstatistiksel Proses Kontrolü (SPC) sonuçları
+- Machine Learning model performansı
+- Production API test sonuçları
+- Genel sonuçlar ve öneriler
+
+→ **Ne zaman kullan**: Analiz sonuçları hakkında bilgi istediğinizde, model performansını anlamak istediğinizde
+
 ## 🚀 Kurulum ve Kullanım
 
 ### 1. Langflow Kurulumu
