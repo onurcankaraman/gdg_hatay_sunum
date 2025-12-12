@@ -18,3 +18,23 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
+
+  langflow:
+    image: langflowai/langflow:latest
+    container_name: langflow
+    ports:
+      - "7860:7860"
+    environment:
+      - LANGFLOW_DATABASE_URL=sqlite:///./langflow.db
+    volumes:
+      - langflow_data:/app/langflow
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7860/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+volumes:
+  langflow_data:

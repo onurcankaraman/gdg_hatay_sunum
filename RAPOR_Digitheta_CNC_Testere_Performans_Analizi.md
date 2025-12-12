@@ -264,53 +264,18 @@ Digitheta CNC Testere aşağıdaki konularda yeterlilik göstermişdir:
 - ✅ **Verimliliği:** Malzeme tasarrufu ve enerji optimizasyonu
 - ✅ **Güvenilirlik:** Beklenen hata oranı (<%1) minimal seviyede
 
----
+--*
 
-## 8. TAVSIYELER
+## 8. UYUMLULUK VE SERTIFIKASYON
 
-### 8.1 Kısa Vadeli (İlk 2 Hafta)
-
-1. ✅ Makine normal bakım takviminde izlenmeye devam edilmelidir
-2. ✅ Bıçak aşınması haftalık kontrol edilmeli (Önerilen değer: Max 5 birim)
-3. ✅ Kesim parametreleri mevcut seviyelerde devam edilebilir
-4. ✅ Soğutucu sıvı seviyeleri düzenli kontrol edilmeli
-
-### 8.2 Orta Vadeli (1-3 Ay)
-
-1. 📋 Aylık bakım raporları oluşturulmalı (Korelasyon analizi tekrarlanmalı)
-2. 📋 Bıçak değişim tarihi 100+ saat operasyona göre planlanmalı
-3. 📋 CNC yazılımı güncellemeleri kontrol edilmeli
-4. 📋 Motor ve soğutma sistemi performansı izlenmeli
-
-### 8.3 Uzun Vadeli (3-12 Ay)
-
-1. 📋 Yıllık kapsamlı makine tamir ve bakımı planlanmalı
-2. 📋 Bıçak stoğu yönetim sistemi oluşturulmalı
-3. 📋 Operatör eğitimi periyodik olarak tekrarlanmalı
-4. 📋 Makine verimliliği trendi analizi yapılmalı
-
-### 8.4 Acil Müdahale Kriteri
-
-**Aşağıdaki koşullar tespit edilirse acil müdahale yapılmalıdır:**
-
-- ⛔ Aşınma Oranı > 12 (Üst İkaz Limitini aşma)
-- ⛔ Kesme Gücü > 25 kW (Anormal yük)
-- ⛔ RPM < 950 veya > 1.380 (Denetim Limitleri dışı)
-- ⛔ İlerleme Hızı sıfırda sabit kalması (Sistem arızası)
-- ⛔ Güç tüketiminde %30+ ani artış
-
----
-
-## 9. UYUMLULUK VE SERTIFIKASYON
-
-### 9.1 Standartlara Uyum
+### 8.1 Standartlara Uyum
 
 - ✅ **ISO 9001:2015** - Kalite Yönetim Sistemi
 - ✅ **ISO 11175:2014** - Metaldeğerli Bir Makine Kesme - Kesme Koşulları
 - ✅ **EN 12417:2010** - CNC Makine Güvenliği
 - ✅ **ISO 13849-1:2015** - Fonksiyonel Güvenlik
 
-### 9.2 Kalite Göstergeleri
+### 8.2 Kalite Göstergeleri
 
 | Gösterge | Değer | Hedef | Durum |
 |----------|-------|-------|-------|
@@ -320,7 +285,7 @@ Digitheta CNC Testere aşağıdaki konularda yeterlilik göstermişdir:
 
 ---
 
-## 10. SONUÇ
+## 9. SONUÇ
 
 Digitheta CNC Testere, 2025-01-01 tarihindeki 30 dakikalık operasyonu başarıyla tamamlamış ve tüm teknik parametrelerde beklenen normatif değerleri göstermişdir.
 

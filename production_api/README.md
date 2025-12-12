@@ -68,6 +68,99 @@ Birden fazla örnek için toplu tahmin yapar.
 ### GET `/model/info`
 Model hakkında bilgi döndürür.
 
+## API İstek Rehberi (Yeni Başlayanlar)
+
+### Temel Bilgiler
+
+- **Base URL**: `http://localhost:8000`
+- **İçerik Türü**: JSON gönderirken `Content-Type: application/json`
+- **Doğrulama**: Şu an açık API, auth yok; gerçek ortamda API key/JWT ekleyin.
+
+### Adım Adım Tek Tahmin
+
+```bash
+curl -X POST "http://localhost:8000/predict" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "kesme_gucu": 150,
+    "ilerleme_hizi": 80,
+    "rpm": 2500
+  }'
+```
+
+Beklenen yanıt:
+
+```json
+{
+  "asinma_orani": 7.30,
+  "features": {
+    "Kesme Gücü": 150.0,
+    "İlerleme Hızı": 80.0,
+    "RPM": 2500.0
+  }
+}
+```
+
+### Adım Adım Toplu Tahmin (Batch)
+
+```bash
+curl -X POST "http://localhost:8000/predict/batch" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "veriler": [
+      {"kesme_gucu": 150, "ilerleme_hizi": 80,  "rpm": 2500},
+      {"kesme_gucu": 120, "ilerleme_hizi": 60,  "rpm": 2200}
+    ]
+  }'
+```
+
+Beklenen yanıt (özet istatistikler dahil):
+
+```json
+{
+  "tahminler": [7.30, 5.98],
+  "ortalama": 6.64,
+  "min": 5.98,
+  "max": 7.30
+}
+```
+
+### Sık Yapılan Hatalar ve Çözümler
+
+- **Eksik alan**: Her kayıt için `kesme_gucu`, `ilerleme_hizi`, `rpm` zorunlu. Eksikse 422 hatası alırsınız.
+- **Tür uyumsuzluğu**: String yerine sayı gönderin (ör. `"120"` değil `120`).
+- **Yanlış JSON**: Son satırda virgül bırakmayın, tırnakları kapatın.
+- **Port hatası**: 8000 başka servis tarafından kullanılıyorsa `docker-compose.yml` içinde portu değiştirin (ör. `8080:8000`).
+
+### Postman ile Test (GUI sevenler için)
+
+1) New Request → Method: `POST` → URL: `http://localhost:8000/predict`
+2) Body → raw → JSON seçin, şu örneği yapıştırın:
+```json
+{
+  "kesme_gucu": 150,
+  "ilerleme_hizi": 80,
+  "rpm": 2500
+}
+```
+3) Send butonuna basın; yanıtı Response panelinden okuyun.
+
+### Python ile En Basit Örnek
+
+```python
+import requests
+
+payload = {"kesme_gucu": 150, "ilerleme_hizi": 80, "rpm": 2500}
+r = requests.post("http://localhost:8000/predict", json=payload)
+r.raise_for_status()
+print(r.json())
+```
+
+### Sağlık Kontrolü
+
+- Hızlı kontrol: `curl http://localhost:8000/health`
+- 200 dönüyorsa servis ayakta demektir; farklı kod dönüyorsa loglara bakın: `docker-compose logs -f`
+
 ## Kurulum ve Çalıştırma
 
 ### 1. Modeli Kopyalayın

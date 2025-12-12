@@ -63,6 +63,19 @@ curl -X POST http://localhost:8000/predict \
 
 **Swagger UI**: http://localhost:8000/docs
 
+### 4️⃣ Langflow AI Agent
+```bash
+# Langflow arayüzüne git
+http://localhost:7860
+
+# Import project
+1. "New Project" → "Import" → langflow/GDG Hatay Example.json
+2. Google API key'ini Agent bileşenine ekle
+3. Playground'dan test et
+```
+
+**Detaylı rehber**: [langflow/README.md](langflow/README.md)
+
 ---
 
 ## 📁 Proje Yapısı
@@ -91,13 +104,17 @@ GDG_HATAY/
 │   ├── wear_gb_tuned_model.joblib         # Tuned model (Production)
 │   └── wear_gradientboosting_model.joblib # Baseline model
 │
-└── 🐳 production_api/                      # Docker REST API
-    ├── app.py                              # FastAPI application
-    ├── Dockerfile                          # Container image
-    ├── docker-compose.yml                  # Orchestration
-    ├── requirements.txt                    # Dependencies
-    ├── test_api.py                         # API test script
-    └── README.md                           # Deployment guide
+├── 🐳 production_api/                      # Docker REST API
+│   ├── app.py                              # FastAPI application
+│   ├── Dockerfile                          # Container image
+│   ├── docker-compose.yml                  # Orchestration (API + Langflow)
+│   ├── requirements.txt                    # Dependencies
+│   ├── test_api.py                         # API test script
+│   └── README.md                           # Deployment guide
+│
+└── 🤖 langflow/                            # Langflow AI Agent
+    ├── GDG Hatay Example.json              # Langflow project export
+    └── README.md                           # Import & setup guide
 ```
 
 ---
@@ -185,6 +202,11 @@ Test Success:      7/7 (100%)
 - **Pydantic**: Data validation
 - **Docker**: Containerization
 - **Docker Compose**: Orchestration
+
+### AI Agent
+- **Langflow**: Low-code AI agent platform (1.6.5)
+- **Google Generative AI**: LLM backend
+- **Tools**: File reader, Python REPL, API integration
 
 ---
 
