@@ -55,6 +55,17 @@ services:
       retries: 3
       start_period: 30s
 
+  qdrant-console:
+    image: ghcr.io/qdrant/qdrant-console:latest
+    container_name: qdrant-console
+    ports:
+      - "8081:80"
+    environment:
+      - QDRANT_URL=http://qdrant:6333
+    depends_on:
+      - qdrant
+    restart: unless-stopped
+
 volumes:
   langflow_data:
   qdrant_storage:
